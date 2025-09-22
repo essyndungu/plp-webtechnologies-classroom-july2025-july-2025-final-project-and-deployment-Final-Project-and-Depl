@@ -55,7 +55,7 @@ project-folder/
 
 1. **Clone or Download the Repository**
 ```bash
-git clone https://github.com/yourusername/essies-public-library.git
+git clone https://github.com/essyndungu/plp-webtechnologies-classroom-july2025-july-2025-final-project-and-deployment-Final-Project-and-Depl)  ** or download** https://github.com/essyndungu/plp-webtechnologies-classroom-july2025-july-2025-final-project-and-deployment-Final-Project-and-Depl
 ```
 
 2. **Open the Project**
@@ -73,5 +73,6 @@ Simply open `index.html` in your browser — no server setup required.
 ## 📜 License
 
 This project is open-source and available under the **MIT License**.
+
 
 
