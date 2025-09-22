@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essies Public Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Essies Public Library</h1>
+            <p class="tagline">Discover, Learn, Grow</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <div class="nav-container">
+                <button class="nav-btn active" onclick="showSection('about')">About</button>
+                <button class="nav-btn" onclick="showSection('catalog')">Book Catalog</button>
+                <button class="nav-btn" onclick="showSection('add-book')">Add Book</button>
+                <button class="nav-btn" onclick="showSection('contact')">Contact</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <!-- About Section -->
+            <div id="about" class="section active">
+                <div class="info-section">
+                    <h2>About Our Library</h2>
+                    <p>Welcome to Essies Public Library, your gateway to knowledge and imagination. Since 1925, we have been serving our community with a vast collection of books, digital resources, and educational programs.</p>
+                    
+                    <h3 style="margin-top: 2rem; color: #2c3e50;">Our Mission</h3>
+                    <p>To provide free and equal access to information, promote literacy, and foster a love of learning in our diverse community.</p>
+
+                    <h3 style="margin-top: 2rem; color: #2c3e50;">Library Hours</h3>
+                    <table class="hours-table">
+                        <tr>
+                            <th>Day</th>
+                            <th>Hours</th>
+                        </tr>
+                        <tr>
+                            <td>Monday - Friday</td>
+                            <td>9:00 AM - 8:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>9:00 AM - 6:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>12:00 PM - 5:00 PM</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Book Catalog Section -->
+            <div id="catalog" class="section">
+                <div class="search-container">
+                    <h2>Search Our Collection</h2>
+                    <div style="margin-top: 1rem;">
+                        <input type="text" id="searchInput" class="search-box" placeholder="Search by title, author, or genre...">
+                        <button class="search-btn" onclick="searchBooks()">Search</button>
+                    </div>
+                </div>
+
+                <div id="booksContainer" class="books-grid">
+                    <!-- Books will be displayed here -->
+                </div>
+            </div>
+
+            <!-- Add Book Section -->
+            <div id="add-book" class="section">
+                <div class="form-container">
+                    <h2>Add New Book</h2>
+                    <form id="addBookForm">
+                        <div class="form-group">
+                            <label for="bookTitle">Book Title:</label>
+                            <input type="text" id="bookTitle" name="title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="bookAuthor">Author:</label>
+                            <input type="text" id="bookAuthor" name="author" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="bookGenre">Genre:</label>
+                            <select id="bookGenre" name="genre" required>
+                                <option value="">Select Genre</option>
+                                <option value="Fiction">Fiction</option>
+                                <option value="Non-Fiction">Non-Fiction</option>
+                                <option value="Mystery">Mystery</option>
+                                <option value="Romance">Romance</option>
+                                <option value="Science Fiction">Science Fiction</option>
+                                <option value="Biography">Biography</option>
+                                <option value="History">History</option>
+                                <option value="Children">Children</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="bookYear">Publication Year:</label>
+                            <input type="number" id="bookYear" name="year" min="1000" max="2025">
+                        </div>
+                        <button type="submit" class="btn">Add Book</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div id="contact" class="section">
+                <div class="info-section">
+                    <h2>Contact Information</h2>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 1rem;">
+                        <div>
+                            <h3 style="color: #2c3e50;">Address</h3>
+                            <p>123 muthiora Street<br>
+                            Dagoretti, ST 12345</p>
+                        </div>
+                        <div>
+                            <h3 style="color: #2c3e50;">Phone</h3>
+                            <p>0757118650</p>
+                        </div>
+                        <div>
+                            <h3 style="color: #2c3e50;">Email</h3>
+                            <p>estherndungu183@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <h3 style="margin-top: 2rem; color: #2c3e50;">Send us a Message</h3>
+                    <form style="margin-top: 1rem;">
+                        <div class="form-group">
+                            <label for="contactName">Name:</label>
+                            <input type="text" id="contactName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email:</label>
+                            <input type="email" id="contactEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Message:</label>
+                            <textarea id="contactMessage" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Essies Public Library. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
